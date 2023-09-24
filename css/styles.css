@@ -34,6 +34,7 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
+  background-color: black;
 }
 
 /* A elements that don't have a class get default styles */
@@ -74,7 +75,7 @@ select {
 
 .mainContent{
     padding: 200px;
-    display: flex;
+    display: inline-flex;
 }
 
 .mainOptions{
@@ -83,8 +84,9 @@ select {
 }
 
 .mainSketchpad{
-    display: flex;
+    display: inline-flex;
     height: 600px;
     width: 600px;
     flex-wrap: wrap;
+    border: 10px solid white;
 }
