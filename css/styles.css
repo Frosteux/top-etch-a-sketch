@@ -71,3 +71,21 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+.mainContent{
+    padding: 200px;
+    border: 10px solid black;
+    display: flex;
+}
+
+.mainOptions{
+    height: 600px;
+    width: 300px;
+    border: 5px solid blue;
+}
+
+.mainSketchpad{
+    height: 600px;
+    width: 600px;
+    border: 5px solid red;
+}
