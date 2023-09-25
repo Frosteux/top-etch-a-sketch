@@ -94,3 +94,12 @@ select {
 .colorText{
     color:white
 }
+
+p,
+.sliderValue{
+    color:white;
+}
+
+.resetButton{
+    margin-top: 5px;
+}
