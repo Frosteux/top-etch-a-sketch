@@ -2,6 +2,7 @@ const sketchpad = document.querySelector('.mainSketchpad');
 const sketchpadWidth = sketchpad.clientWidth;
 const sketchpadHeight = sketchpad.clientHeight;
 const drawColor = document.querySelector('.userColor')
+let rainbowMode = false;
 
 buildSketchGrid(32);
 
@@ -32,7 +33,12 @@ document.addEventListener('mousemove', function(e){
     const selectedBoxID = e.target.id;
     const selectedBox = document.getElementById(selectedBoxID);
     if(selectedBoxID!==null && selectedBox!==null){
+        if(rainbowMode){
+            const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            selectedBox.style.backgroundColor = randomColor;
+        } else {
         selectedBox.style.backgroundColor = drawColor.value;
+        }
     }
 });
 
@@ -58,6 +64,16 @@ function resetFunction(){
     output[0].innerText = "32";
     slider[0].value = "32";
     userColor[0].value="#c02eff";
+    document.getElementsByClassName("rainbowMode")[0].checked = false;
+    rainbowMode = false;
     buildSketchGrid(32);
 
+}
+
+function unleashTheRainbow(){
+    if(rainbowMode){
+        rainbowMode = false;
+    } else {
+        rainbowMode = true;
+    }
 }

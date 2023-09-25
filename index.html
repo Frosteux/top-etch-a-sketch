@@ -12,11 +12,15 @@
         <div class="mainOptions">
             <label class="colorText">Please select a color</label>
             <input type="color" class="userColor" value="#c02eff">
+            <label>
+                <p></p><input type="checkbox" class="rainbowMode" onclick="unleashTheRainbow()">
+                <span style="color:white">Rainbow Mode!</span>
+            </label>
             <div class="slideContainer">
                 <input type="range" min="16" max="100" value="32" class="slider">
                 <p>Value: <span class="sliderValue"></span></p>
             </div>
-            <button onclick="resetFunction()" class="resetButton">Reset</button>
+            <p></p><button onclick="resetFunction()" class="resetButton">Reset</button>
         </div>
         <div class="mainSketchpad"></div>
     </div>
