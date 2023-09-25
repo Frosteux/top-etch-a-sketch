@@ -18,7 +18,7 @@ function buildSketchGrid(userSelectedSize){
     // Build boxes based on the available space.
     for(let i=0;i<+userSelectedSize*+userSelectedSize;i++){
         let innerBox = document.createElement('div');
-        innerBox.style.border = '.1px solid white';
+        innerBox.style.border = '.5px dotted darkgray';
         innerBox.style.width = innerSketchpadBoxWidth + 'px';
         innerBox.style.height = innerSketchpadBoxHeight + 'px';
         innerBox.classList.add('sketchPadInside');
@@ -57,7 +57,7 @@ function resetFunction(){
 
     output[0].innerText = "32";
     slider[0].value = "32";
-    userColor[0].value="#ff0000";
+    userColor[0].value="#c02eff";
     buildSketchGrid(32);
 
 }
