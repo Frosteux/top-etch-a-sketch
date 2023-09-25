@@ -90,3 +90,7 @@ select {
     flex-wrap: wrap;
     border: 10px solid white;
 }
+
+.colorText{
+    color:white
+}

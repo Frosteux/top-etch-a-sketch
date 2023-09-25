@@ -2,7 +2,7 @@ const sketchpad = document.querySelector('.mainSketchpad');
 const sketchpadWidth = sketchpad.clientWidth;
 const sketchpadHeight = sketchpad.clientHeight;
 const userSelectedSize = '48'
-const drawColor = 'red'
+const drawColor = document.querySelector('.userColor')
 
 // Use the height and width of the sketchpad to determine what size the boxes inside it need to be.
 const innerSketchpadBoxWidth = sketchpadWidth / +userSelectedSize;
@@ -23,5 +23,5 @@ for(let i=0;i<+userSelectedSize*+userSelectedSize;i++){
 document.addEventListener('mousemove', function(e){
     const selectedBoxID = e.target.id;
     const selectedBox = document.getElementById(selectedBoxID);
-    selectedBox.style.backgroundColor = drawColor;
+    selectedBox.style.backgroundColor = drawColor.value;
 });
